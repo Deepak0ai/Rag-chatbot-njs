@@ -1,6 +1,4 @@
-import type { KnowledgeEntry } from "@/types";
-
-export const knowledgeBase: KnowledgeEntry[] = [
+export const knowledgeBase = [
   {
     title: "Services",
     content:

@@ -1,8 +1,7 @@
 import { GoogleGenerativeAI, GenerativeModel } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import type { ChatRequestBody, ChatResponseBody, Message } from "@/types";
-import { retrieveContext } from "@/lib/knowledgeBase";
-
+import { retrieveContext } from "../../../lib/knowledgeBase";
 function buildPrompt(context: string, userMessage: string): string {
   return `You are a helpful and friendly AI assistant.
 

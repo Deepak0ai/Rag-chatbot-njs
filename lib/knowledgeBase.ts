@@ -12,7 +12,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
   {
     title: "Company",
     content:
-      "This is a RAG-powered chatbot built with Next.js 15, TypeScript, Google Gemini AI, and deployed on Vercel.",
+      "This is a RAG-powered chatbot built with Next.js 15, Google Gemini AI, and deployed on Vercel.",
   },
   {
     title: "Support",
@@ -27,7 +27,7 @@ export const knowledgeBase: KnowledgeEntry[] = [
   {
     title: "Technology",
     content:
-      "Our tech stack includes n8n, Apollo.io, Clay.com, OpenAI API, Pinecone vector database, Python, and Airtable for workflow automation.",
+      "Our tech stack includes n8n, Apollo.io, Clay.com, Google Gemini API, Pinecone, Python, and Airtable for workflow automation.",
   },
 ];
 

@@ -1,4 +1,9 @@
-export const knowledgeBase = [
+type KnowledgeEntry = {
+  title: string;
+  content: string;
+};
+
+export const knowledgeBase: KnowledgeEntry[] = [
   {
     title: "Services",
     content:
@@ -30,10 +35,10 @@ export function retrieveContext(query: string): string {
   const normalizedQuery = query.toLowerCase();
   const queryWords = normalizedQuery.split(/[^a-z0-9]+/).filter(Boolean);
 
-  const scored = knowledgeBase.map((entry: KnowledgeEntry) => {
+  const scored = knowledgeBase.map((entry) => {
     const entryText = `${entry.title} ${entry.content}`.toLowerCase();
     const score = queryWords.reduce(
-      (acc: number, word: string) => acc + (entryText.includes(word) ? 1 : 0),
+      (acc, word) => acc + (entryText.includes(word) ? 1 : 0),
       0
     );
     return { ...entry, score };
